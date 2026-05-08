@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head><title>City Library Registration</title></head>
+<body>
+<h1 align="center">City Central Library</h1>
+<hr>
+<p align="center"><a href="#register">Register</a> | <a href="#plans">Plans</a> | <a href="#contact">Contact</a></p>
+<hr>
+
+<h2 id="plans">Membership Plans</h2>
+<table border="1" cellpadding="5">
+<tr bgcolor="lightgray"><th>Plan</th><th>Books</th><th>Fee</th></tr>
+<tr><td>Student</td><td>3</td><td>₹500</td></tr>
+<tr><td>Regular</td><td>5</td><td>₹1000</td></tr>
+<tr><td>Premium</td><td>10</td><td>₹2000</td></tr>
+</table>
+
+<h2 id="register">Registration Form</h2>
+<form>
+Name: <input type="text" name="name" required><br><br>
+Email: <input type="email" name="email" required><br><br>
+Phone: <input type="tel" name="phone" required><br><br>
+Plan: 
+<select name="plan" required>
+<option value="">Select Plan</option>
+<option>Student</option>
+<option>Regular</option>
+<option>Premium</option>
+</select><br><br>
+ID Proof: <select name="idproof" required>
+<option value="">Select ID</option>
+<option>Aadhar Card</option>
+<option>Student ID</option>
+</select><br><br>
+Address: <br><textarea name="address" rows="3" cols="30" required></textarea><br><br>
+<button type="submit">Register</button>
+<button type="reset">Clear</button>
+</form>
+
+<h3 id="contact">Contact</h3>
+<p>Email: <a href="mailto:library@citylibrary.org">library@citylibrary.org</a><br>
+Phone: <a href="tel:+919876543210">+91 98765 43210</a><br>
+Hours: 9 AM - 8 PM, Mon-Sat</p>
+</body>
+</html>
