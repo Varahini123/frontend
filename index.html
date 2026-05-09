@@ -1,45 +1,139 @@
 <!DOCTYPE html>
 <html>
-<head><title>City Library Registration</title></head>
+<head>
+    <title>City Library Membership</title>
+</head>
 <body>
-<h1 align="center">City Central Library</h1>
-<hr>
-<p align="center"><a href="#register">Register</a> | <a href="#plans">Plans</a> | <a href="#contact">Contact</a></p>
-<hr>
+    <h1 align="center">City Central Library</h1>
+    <hr>
 
-<h2 id="plans">Membership Plans</h2>
-<table border="1" cellpadding="5">
-<tr bgcolor="lightgray"><th>Plan</th><th>Books</th><th>Fee</th></tr>
-<tr><td>Student</td><td>3</td><td>₹500</td></tr>
-<tr><td>Regular</td><td>5</td><td>₹1000</td></tr>
-<tr><td>Premium</td><td>10</td><td>₹2000</td></tr>
-</table>
+    <h2>
+        <a href="#home">Home</a> |
+        <a href="#books">Books</a> |
+        <a href="#plans">Membership Plans</a> |
+        <a href="#register">Register</a> |
+        <a href="#contact">Contact</a>
+    </h2>
+    <hr>
 
-<h2 id="register">Registration Form</h2>
-<form>
-Name: <input type="text" name="name" required><br><br>
-Email: <input type="email" name="email" required><br><br>
-Phone: <input type="tel" name="phone" required><br><br>
-Plan: 
-<select name="plan" required>
-<option value="">Select Plan</option>
-<option>Student</option>
-<option>Regular</option>
-<option>Premium</option>
-</select><br><br>
-ID Proof: <select name="idproof" required>
-<option value="">Select ID</option>
-<option>Aadhar Card</option>
-<option>Student ID</option>
-</select><br><br>
-Address: <br><textarea name="address" rows="3" cols="30" required></textarea><br><br>
-<button type="submit">Register</button>
-<button type="reset">Clear</button>
-</form>
+    <h1 id="home">Welcome to City Library</h1>
+    <p>
+        Join our library and get access to 50,000+ books, magazines, and digital resources.<br>
+        Open Monday to Saturday: 9 AM - 8 PM
+    </p>
 
-<h3 id="contact">Contact</h3>
-<p>Email: <a href="mailto:library@citylibrary.org">library@citylibrary.org</a><br>
-Phone: <a href="tel:+919876543210">+91 98765 43210</a><br>
-Hours: 9 AM - 8 PM, Mon-Sat</p>
+    <h2 id="books">Popular Book Categories</h2>
+    <ul>
+        <li>Fiction & Novels</li>
+        <li>Science & Technology</li>
+        <li>History & Biography</li>
+        <li>Children's Books</li>
+        <li>Competitive Exam Guides</li>
+    </ul>
+
+    <img src="https://images.unsplash.com/photo-1481627834876-b7833e8f5570?w=400" alt="Library" width="300" height="200">
+    <img src="https://static.thenounproject.com/png/3237155-200.png" alt="Books" width="300" height="200">
+    <br><br>
+
+    <h2 id="plans">Membership Plans</h2>
+    <table border="3" width="700" cellpadding="10" cellspacing="5">
+        <tr bgcolor="lightgray">
+            <th>Plan Type</th>
+            <th>Duration</th>
+            <th>Books Limit</th>
+            <th>Fees</th>
+        </tr>
+        <tr>
+            <td>Student</td>
+            <td>1 Year</td>
+            <td>3 Books</td>
+            <td>₹500</td>
+        </tr>
+        <tr>
+            <td>Regular</td>
+            <td>1 Year</td>
+            <td>5 Books</td>
+            <td>₹1000</td>
+        </tr>
+        <tr>
+            <td>Premium</td>
+            <td>1 Year</td>
+            <td>10 Books</td>
+            <td>₹2000</td>
+        </tr>
+    </table>
+    <br>
+
+    <h2 id="register">Membership Registration Form</h2>
+    <form action="" method="post">
+        <label for="name">Enter your name:</label>
+        <input type="text" id="name" name="name" required>
+        <br><br>
+
+        <label for="email">Enter your email:</label>
+        <input type="email" id="email" name="email" required>
+        <br><br>
+
+        <label for="phone">Phone number:</label>
+        <input type="tel" id="phone" name="phone" required>
+        <br><br>
+
+        <label for="dob">Date of birth:</label>
+        <input type="date" id="dob" name="dob" required>
+        <br><br>
+
+        <label>Gender:</label><br>
+        <input type="radio" id="male" name="gender" value="male">
+        <label for="male">Male</label>
+        <input type="radio" id="female" name="gender" value="female">
+        <label for="female">Female</label>
+        <br><br>
+
+        <label>Select Membership Plan:</label><br>
+        <input type="radio" id="student" name="plan" value="student">
+        <label for="student">Student Plan</label>
+        <input type="radio" id="regular" name="plan" value="regular">
+        <label for="regular">Regular Plan</label>
+        <input type="radio" id="premium" name="plan" value="premium">
+        <label for="premium">Premium Plan</label>
+        <br><br>
+
+        <label>Book Interests:</label><br>
+        <input type="checkbox" id="fiction" name="interest" value="fiction">
+        <label for="fiction">Fiction</label>
+        <input type="checkbox" id="science" name="interest" value="science">
+        <label for="science">Science</label>
+        <input type="checkbox" id="history" name="interest" value="history">
+        <label for="history">History</label>
+        <br><br>
+
+        <label for="idproof">ID Proof Type:</label>
+        <select id="idproof" name="idproof" required>
+            <option value="">Select ID Proof</option>
+            <option value="aadhar">Aadhar Card</option>
+            <option value="student">Student ID</option>
+            <option value="driving">Driving License</option>
+        </select>
+        <br><br>
+
+        <label for="address">Full Address:</label><br>
+        <textarea id="address" name="address" rows="4" cols="40" required></textarea>
+        <br><br>
+
+        <button type="submit">Submit Registration</button>
+        <button type="reset">Clear Form</button>
+    </form>
+    <br>
+
+    <h2 id="contact">Contact Us</h2>
+    <p>
+        <b>Email:</b> <a href="mailto:library@citylibrary.org">library@citylibrary.org</a><br>
+        <b>Phone:</b> <a href="tel:+919876543210">+91 98765 43210</a><br>
+        <b>Address:</b> City Central Library, MG Road, Rajam, AP - 532127<br>
+        <b>Hours:</b> Monday - Saturday, 9:00 AM to 8:00 PM
+    </p>
+    <hr>
+    <p align="center">© 2026 City Central Library. All rights reserved.</p>
 </body>
 </html>
+Show number of limes
